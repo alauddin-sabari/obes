@@ -83,20 +83,23 @@
    </button>
 
             <div class="collapse navbar-collapse py-2 pr-5" id="navmenu">
-                <ul class="navbar-nav ms-auto   ml-auto">
+                <ul class="navbar-nav ms-auto   ml-auto mr-2">
 
 
-                    <div class="dropdown ml-auto text-bold " '>
-                        <button class="btn btn-outline-primary text-light dropdown-toggle mr-2 "  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"  style='font-weight: bold; '>
-                         Volcano plot
+                    <div class="dropdown ml-auto text-bold ">
+                        <button class="btn btn-outline-primary text-light dropdown-toggle mr-2 " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style='font-weight: bold; '>
+                         Venn Diagram
                         </button>
-                        <ul class="dropdown-menu bg-info" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item "  onclick="toggleHide()" href="#demo" >Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu bg-info text-bold" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item " href="https://nbviewer.jupyter.org/github/alauddin-sabari/obesity-psychiatric/blob/master/notebook/Obesity_Pvalue_all_appended_diseases.ipynb" target='notebook'>Obesity-Psychiatric</a></li>
+                            <li><a class="dropdown-item " onclick="toggleHide()" href="#demo">Obesity-BD</a></li>
+                            <li><a class="dropdown-item " onclick="toggleHide()" href="#demo">Obesity-MD</a></li>
+                            <li><a class="dropdown-item " onclick="toggleHide()" href="#demo">Obesity-PTSD</a></li>
+                            <li><a class="dropdown-item " onclick="toggleHide()" href="#demo">Obesity-SCZ</a></li>
+
                         </ul>
                     </div>
-                    
+                    <span></span>
                     <div class="dropdown ml-auto text-bold" '>
                         <button class="btn border text-light dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style='font-weight: bold; '>
                          Volcano plot
@@ -110,7 +113,7 @@
 
 
                     <div class="dropdown ml-auto text-bold text-info" '>
-                        <button class="btn  text-light dropdown-toggle border "  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"  style='font-weight: bold; '>
+                        <button class="btn  text-light dropdown-toggle border " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style='font-weight: bold; '>
                          Volcano plot
                         </button>
                         <ul class="dropdown-menu bg-info" aria-labelledby="dropdownMenuButton1">
@@ -123,34 +126,30 @@
                     <button onclick="toggleHide()"> <a href="#demo" class="nav-link">What You'll Learn</a>
                         </button>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#demo" onclick="toggleHide()" class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
-                                <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a onclick="toggleHide()" href="#demo" class="nav-link">What You'll Learn</a>
-                        </li>
-                        <li class="nav-item">
-                            <a onclick='togglehide( "demo") ' href="/" onclick="toggleHide()" class="nav-link">notebook</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#instructors" class="nav-link">Instructors</a>
-                        </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#demo" onclick="toggleHide()" class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                            <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="https://alauddinsabari.shinyapps.io/search/" class="nav-link" target='search'>What You'll Learn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick='togglehide( "demo") ' href="/" onclick="toggleHide()" class="nav-link">notebook</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#instructors" class="nav-link">Instructors</a>
+                    </li>
                 </ul>
-                </div>
             </div>
+        </div>
     </nav>
-
-    <iframe id="demo" src="https://nbviewer.jupyter.org/github/alauddin-sabari/DataWork/blob/master/pandas.ipynb" style="width:100%; height:100%; display:none;" onLoad="calcHeight();"></iframe>
-
-
     <div class="container " style="background-image: url('https://images.unsplash.com/photo-1573883431205-98b5f10aaedb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80 ');">
         <div class="d-lg-flex align-items-center justify-content-between">
             <div>
@@ -167,6 +166,13 @@ Connect User
         </div>
     </div>
     </section>
+
+    <iframe id="demo" src="https://nbviewer.jupyter.org/github/alauddin-sabari/DataWork/blob/master/pandas.ipynb" style="width:100%; height:100%; display:none;" onLoad="calcHeight();"></iframe>
+
+    <iframe style="width: 100%; height: 100%;" src="" name='notebook'></iframe>
+    <iframe style="width: 100%; height: 100%;" src="" name='search'></iframe>
+
+
 
 
 
@@ -187,6 +193,12 @@ Connect User
 
             }
         }
+
+        var frame = document.querySelector("iframe");
+        header = frame.contentDocument.getElementByIde("menubar");
+        header.style.color = red;
+        footer = frame.contentDocument.querySelector("footer");
+        footer.remove();
     </script>
 
 
