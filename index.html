@@ -52,7 +52,7 @@
         }
         
         body {
-            border: 4px solid green;
+            border: 4px solid white;
         }
         
         iframe {
@@ -91,25 +91,21 @@
                          Venn Diagram
                         </button>
                         <ul class="dropdown-menu bg-info text-bold" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item " href="https://nbviewer.jupyter.org/github/alauddin-sabari/obesity-psychiatric/blob/master/notebook/Obesity-others.ipynb" target='notebook'>Obesity-Psychiatric</a></li>
-                            <li><a class="dropdown-item " href="https://nbviewer.jupyter.org/github/alauddin-sabari/obesity-psychiatric/blob/master/notebook/Obesity_Bipolar.ipynb" target='notebook'>Obesity-BD</a></li>
-                            <li><a class="dropdown-item " href="https://nbviewer.jupyter.org/github/alauddin-sabari/obesity-psychiatric/blob/master/notebook/Obesity_MD.ipynb" target='notebook'>Obesity-MD</a></li>
-                            <li><a class="dropdown-item " href="https://nbviewer.jupyter.org/github/alauddin-sabari/obesity-psychiatric/blob/master/notebook/Obesity_PTSD.ipynb" target='notebook'>Obesity-PTSD</a></li>
-                            <li><a class="dropdown-item " href="https://nbviewer.jupyter.org/github/alauddin-sabari/obesity-psychiatric/blob/master/notebook/Obesity_SCZ.ipynb" target='notebook'>Obesity-SCZ</a></li>
+                            <li><a onclick="toggleHide('#demo ')" class="dropdown-item " href="https://nbviewer.jupyter.org/github/alauddin-sabari/obesity-psychiatric/blob/master/notebook/Obesity-others.ipynb" target='notebook'>Obesity-Psychiatric</a></li>
+                            <li><a onclick="toggleHide('#demo ')" class="dropdown-item " href="https://nbviewer.jupyter.org/github/alauddin-sabari/obesity-psychiatric/blob/master/notebook/Obesity_Bipolar.ipynb" target='notebook'>Obesity-BD</a></li>
+                            <li><a onclick="toggleHide('#demo ')" class="dropdown-item " href="https://nbviewer.jupyter.org/github/alauddin-sabari/obesity-psychiatric/blob/master/notebook/Obesity_MD.ipynb" target='notebook'>Obesity-MD</a></li>
+                            <li><a onclick="toggleHide('#demo ')" class="dropdown-item " href="https://nbviewer.jupyter.org/github/alauddin-sabari/obesity-psychiatric/blob/master/notebook/Obesity_PTSD.ipynb" target='notebook'>Obesity-PTSD</a></li>
+                            <li><a onclick="toggleHide('#demo ')" class="dropdown-item " href="https://nbviewer.jupyter.org/github/alauddin-sabari/obesity-psychiatric/blob/master/notebook/Obesity_SCZ_.ipynb" target='notebook'>Obesity-SCZ</a></li>
 
 
                         </ul>
                     </div>
-                    <span></span>
-                    <div class="dropdown ml-auto text-bold" '>
-                        <button class="btn border text-light dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style='font-weight: bold; '>
-                         Volcano plot
-                        </button>
-                        <ul class="dropdown-menu bg-info" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item " href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <div>
+                        <a onclick="toggleHide('#demo ')" class="ml-auto text-bold" href="https://alauddinsabari.shinyapps.io/search/" target='notebook'> <button class="btn border text-light " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style='font-weight: bold; '>
+                            
+                            <i class="fas fa-search"></i> Search<!--  Search<a href="https://alauddinsabari.shinyapps.io/search/" class="nav-link" target='search'></a> -->
+                        </button></a>
+
                     </div>
 
 
@@ -127,34 +123,112 @@
                     <button onclick="toggleHide()"> <a href="#demo" class="nav-link">What You'll Learn</a>
                         </button>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#demo" onclick="toggleHide()" class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
-                            <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="https://alauddinsabari.shinyapps.io/search/" class="nav-link" target='search'>What You'll Learn</a>
-                    </li>
-                    <li class="nav-item">
-                        <a onclick='togglehide( "demo") ' href="/" onclick="toggleHide()" class="nav-link">notebook</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#instructors" class="nav-link">Instructors</a>
-                    </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#demo" onclick="toggleHide()" class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                                <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="https://alauddinsabari.shinyapps.io/search/" class="nav-link" target='search'>What You'll Learn</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a onclick="toggleHide('#demos ')" href="https://alauddinsabari.shinyapps.io/search/" class="btn border text-light " style='font-weight: bold; ' target='search'> <i class="fas fa-search"></i> Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a onclick='togglehide( "demo") ' href="/" onclick="toggleHide()" class="nav-link">notebook</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#instructors" class="nav-link">Instructors</a>
+                        </li>
                 </ul>
+                </div>
+            </div>
+    </nav>
+
+
+    <iframe id="demo" style="width: 100%; height: 100%; display: none;" src="" name='notebook'></iframe>
+    <!-- Showcase -->
+    <section class="bg-danger text-light p-5  pt-lg-5 text-center text-sm-start">
+        <!--text-sm-start mane sm screen er ag porjonto start a hobe text sm breackpoint er kom hole  center -->
+        <!-- under small screen text goes to center-->
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <!--d-sm-flex bolte soto screen (er ag porjonto flex thakbe) a upore niche chole asbe -->
+                <div>
+                    <h1>Health <span class="text-warning">Data Science</span></h1>
+                    <p class="lead my-4">
+                        We focus on teaching our students the fundamentals of the latest and greatest technologies to prepare them for their first dev role
+                    </p>
+                    <button class="btn btn-info btn-lg btn-warning" data-bs-toggle="modal" data-bs-target="#enroll">
+        Search Gene on search box below..
+      </button>
+                </div>
+                <img class="img-fluid w-50 d-none d-sm-block" src="icon/immune.svg" alt="" />
+                <!-- d-none thakle kono scrren ei show hobena | pore d-sm-block means under small screen a image will not show -->
             </div>
         </div>
-    </nav>
-    <iframe style="width: 100%; height: 100%;" src="" name='notebook'></iframe>
+    </section>
+    <!-- ---------------------------------------- -->
 
-    <div class="container " style="background-image: url('https://images.unsplash.com/photo-1573883431205-98b5f10aaedb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80 ');">
-        <div class="d-lg-flex align-items-center justify-content-between">
+
+
+    <!-- Search Bar -->
+
+    <iframe style="width: 100%; height: 100%;" src="https://alauddinsabari.shinyapps.io/obesity/"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="learn" class="p-5">
+        <!-- id = 'learn' ei id call hobe navbar theke| that's cool -->
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <!-- firs one of two section -->
+                <div class="col-md">
+                    <!-- col-6, col-8 , col-sm-8, col-md-8 | col-md before goes to under medium screen it takes equal space  -->
+                    <img src="icon/obes_man.png" class="img-fluid" style='height:75%' alt="" />
+                </div>
+                <!-- Second one of two -->
+                <div class="col-md-4 justify-content p-5">
+                    <h2>Learn The Fundamentals</h2>
+                    <p class="lead ">
+                        <!-- lead does littile bigger text -->
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique deleniti possimus magnam corporis ratione facere!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque reiciendis eius autem eveniet mollitia, at asperiores suscipit quae similique laboriosam iste minus placeat odit velit quos, nulla architecto amet voluptates?
+                    </p>
+                    <a href="#" class="btn btn-light mt-3">
+                        <i class="bi bi-chevron-right"></i> Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <div class="container " style="background-image: url('https://images.unsplash.com/photo-1573883431205-98b5f10aaedb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80 ');"> -->
+    <div class='container my-4' style='height:5px'></div>
+
+    <div class="container  justify-content-between mt-5" style="background-image: url('icon/immune.svg'); width: 100%; ">
+        <div class="d-lg-flex align-items-center">
             <div>
                 <h1>Health <span class="text-warning">Data Science</span></h1>
                 <p class="lead my-4">
@@ -170,9 +244,91 @@ Connect User
     </div>
     </section>
 
-    <iframe id="demo" src="https://nbviewer.jupyter.org/github/alauddin-sabari/DataWork/blob/master/pandas.ipynb" style="width:100%; height:100%; display:none;" onLoad="calcHeight();"></iframe>
 
-    <iframe style="width: 100%; height: 100%;" src="" name='search'></iframe>
+
+    <!-- Question Accordion -->
+    <section id="questions" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div class="accordion accordion-flush" id="questions">
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-one">
+          Where exactly are you located?
+        </button>
+                    </h2>
+                    <div id="question-one" class="accordion-collapse collapse" data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam beatae fuga animi distinctio perspiciatis adipisci velit maiores totam tempora accusamus modi explicabo accusantium consequatur, praesentium rem quisquam molestias at quos vero. Officiis
+                            ad velit doloremque at. Dignissimos praesentium necessitatibus natus corrupti cum consequatur aliquam! Minima molestias iure quam distinctio velit.
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-two">
+          How much does it cost to attend?
+        </button>
+                    </h2>
+                    <div id="question-two" class="accordion-collapse collapse" data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam beatae fuga animi distinctio perspiciatis adipisci velit maiores totam tempora accusamus modi explicabo accusantium consequatur, praesentium rem quisquam molestias at quos vero. Officiis
+                            ad velit doloremque at. Dignissimos praesentium necessitatibus natus corrupti cum consequatur aliquam! Minima molestias iure quam distinctio velit.
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-three">
+          What do I need to Know?
+        </button>
+                    </h2>
+                    <div id="question-three" class="accordion-collapse collapse" data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam beatae fuga animi distinctio perspiciatis adipisci velit maiores totam tempora accusamus modi explicabo accusantium consequatur, praesentium rem quisquam molestias at quos vero. Officiis
+                            ad velit doloremque at. Dignissimos praesentium necessitatibus natus corrupti cum consequatur aliquam! Minima molestias iure quam distinctio velit.
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-four">
+          How Do I sign up?
+        </button>
+                    </h2>
+                    <div id="question-four" class="accordion-collapse collapse" data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam beatae fuga animi distinctio perspiciatis adipisci velit maiores totam tempora accusamus modi explicabo accusantium consequatur, praesentium rem quisquam molestias at quos vero. Officiis
+                            ad velit doloremque at. Dignissimos praesentium necessitatibus natus corrupti cum consequatur aliquam! Minima molestias iure quam distinctio velit.
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-five">
+          Do you help me find a job?
+        </button>
+                    </h2>
+                    <div id="question-five" class="accordion-collapse collapse" data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam beatae fuga animi distinctio perspiciatis adipisci velit maiores totam tempora accusamus modi explicabo accusantium consequatur, praesentium rem quisquam molestias at quos vero. Officiis
+                            ad velit doloremque at. Dignissimos praesentium necessitatibus natus corrupti cum consequatur aliquam! Minima molestias iure quam distinctio velit.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <iframe src="https://nbviewer.jupyter.org/github/alauddin-sabari/DataWork/blob/master/pandas.ipynb" style="width:100%; height:100%; display:none;" onLoad="calcHeight();"></iframe>
+
+    <iframe style="width: 100%; height: 100%;" src="" name='search'></iframe> -->
 
 
 
@@ -189,7 +345,7 @@ Connect User
 
         function toggleHide() {
             if (demo.style.display != 'none') {
-                demo.style.display = 'none';
+                demo.style.display = 'block';
             } else {
                 demo.style.display = 'block';
 
